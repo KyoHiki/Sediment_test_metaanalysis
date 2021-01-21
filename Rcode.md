@@ -24,7 +24,12 @@ Water <- read.xlsx("Metaanalysis_dataset.xlsx",sheet="WaterOnly")
 dim(Sed) # confirm the data dimension
 dim(Water) 
 
+``` 
 
+[1] 158  25
+[1] 45 24
+
+``` r
 #### 3: Show the distribution of sediment toxicity values (Fig. S1) ####
 FigS1 <- Sed %>% 
   mutate(SedType=ifelse(is.na(SedType), "not available", SedType)) %>%
