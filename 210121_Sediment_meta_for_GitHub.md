@@ -1,5 +1,5 @@
 
-``` {r metaanalysis, echo = TRUE, message=FALSE, warning=FALSE}
+``` r 
 ### 1: Install and load the necessary packages ###
 install.packages("openxlsx")
 install.packages("tidyverse")
@@ -41,7 +41,7 @@ FigS1 <- Sed %>%
 FigS1
 ```
 ![](figs/fig-1.png)<!-- -->
-```
+``` r
 #### 4: Compare the CVs between three different concentrations (Fig. 1) ####
 Sed2 <- Sed %>% 
   mutate (Concentration=ifelse(.$Concentration<=0,.$"OCNorm_ug_gOC" * .$"TOC" * 0.01 ,
@@ -95,7 +95,7 @@ Fig1 <- Variation_comp %>%
 Fig1
 ```
 ![](figs/fig-2.png)<!-- -->
-```
+``` r
 #### 5: Check the difference in toxicity values between sediment types (Fig. 2) ####
 Sed2 <- Sed %>% 
   mutate (Concentration=ifelse(.$Concentration<=0,
@@ -137,7 +137,7 @@ all %>%
   ylab(expression(paste("Standardized ",paste(log[10]," LC50"))))
 ```
 ![](figs/fig-3.png)<!-- -->
-```
+``` r
 #### 6: Model selection (Table. 1) ####
 all_model <- all %>%
   ungroup(Chemical,Species) %>% 
