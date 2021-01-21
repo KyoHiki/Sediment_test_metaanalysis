@@ -7,7 +7,10 @@ under construction...
    
 # Files
 1. Rcode.md  
-Not yet.  
+An example R code for analysis and visualization. This code requires an input dataset (e.g., "example.xlsx").  
      
-2. Dataset_spiked_sediment_tests.xlsx  
-Not yet.
+2. Metaanalysis_dataset.xlsx  
+This dataset "Metaanalysis_dataset.xlsx" is required to perform meta-analysis.  
+  
+3. figs  
+Figures generated from the R code.  
