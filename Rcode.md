@@ -40,7 +40,7 @@ FigS1 <- Sed %>%
   labs(shape="Sediment types", fill="Sediment types")
 FigS1
 ```
-![](figs/fig-1.png)<!-- -->
+![](figs/fig-metaanalysis-1.png)<!-- -->
 ``` r
 #### 4: Compare the CVs between three different concentrations (Fig. 1) ####
 Sed2 <- Sed %>% 
@@ -94,7 +94,7 @@ Fig1 <- Variation_comp %>%
                             expression(paste(C[Sed-OC])),expression(paste(C[Water]))) )
 Fig1
 ```
-![](figs/fig-2.png)<!-- -->
+![](figs/fig-metaanalysis-2.png)<!-- -->
 ``` r
 #### 5: Check the difference in toxicity values between sediment types (Fig. 2) ####
 Sed2 <- Sed %>% 
@@ -136,7 +136,7 @@ all %>%
   scale_shape_manual(values = c(21:25,16,17,18)) +
   ylab(expression(paste("Standardized ",paste(log[10]," LC50"))))
 ```
-![](figs/fig-3.png)<!-- -->
+![](figs/fig-metaanalysis-3.png)<!-- -->
 ``` r
 #### 6: Model selection (Table. 1) ####
 all_model <- all %>%
