@@ -1,15 +1,3 @@
----
-title: "Sediment meta-analysis"
-author: "K. HIKI"
-output:
-  html_document: default
-update: '20210121'
----
-
-``` {r knitr}
-knitr::opts_chunk$set(echo = TRUE, message=FALSE,fig.path = "figs/fig-",fig.width=12,fig.height=7)
-options(repos=structure(c(CRAN="YOUR FAVORITE MIRROR")))
-```
 
 ``` {r metaanalysis, echo = TRUE, message=FALSE, warning=FALSE}
 ### 1: Install and load the necessary packages ###
@@ -51,7 +39,7 @@ FigS1 <- Sed %>%
   ylab(expression(paste(paste(log[10]," LC50 based on "), C[Sed-OC]))) +
   labs(shape="Sediment types", fill="Sediment types")
 FigS1
-
+![](figs/fig-1.png)<!-- -->
 
 #### 4: Compare the CVs between three different concentrations (Fig. 1) ####
 Sed2 <- Sed %>% 
@@ -104,7 +92,7 @@ Fig1 <- Variation_comp %>%
                    labels=c(expression(paste(C[Sed])),
                             expression(paste(C[Sed-OC])),expression(paste(C[Water]))) )
 Fig1
-
+![](figs/fig-2.png)<!-- -->
 
 #### 5: Check the difference in toxicity values between sediment types (Fig. 2) ####
 Sed2 <- Sed %>% 
@@ -145,7 +133,7 @@ all %>%
   xlab("Sediment types") +
   scale_shape_manual(values = c(21:25,16,17,18)) +
   ylab(expression(paste("Standardized ",paste(log[10]," LC50"))))
-
+![](figs/fig-3.png)<!-- -->
 
 #### 6: Model selection (Table. 1) ####
 all_model <- all %>%
