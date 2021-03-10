@@ -148,8 +148,8 @@ all_model <- all %>%
   ungroup(Chemical,Species) %>% 
   filter(!is.na(OCNorm_ug_gOC) & !is.na(SedToTotalWater_Ratio) & !is.na(Aging_days) &
            !is.na(Renewal) & !is.na(SpikeMethod_detailed) ) %>%
-  mutate(SedToTotalWater_Ratio = scale(SedToTotalWater_Ratio) ) %>%
-  mutate(Aging_days=scale(Aging_days) ) %>% 
+  mutate(SedToTotalWater_Ratio = scale(log10(SedToTotalWater_Ratio)) ) %>%
+  mutate(Aging_days=scale(log10(Aging_days)) ) %>% 
   mutate(TOC = scale(TOC) ) %>%
   mutate(OrganicSource=ifelse(is.na(OrganicSource), "Environ", OrganicSource) )
 
