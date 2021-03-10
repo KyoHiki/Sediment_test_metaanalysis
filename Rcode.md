@@ -18,7 +18,8 @@ library(ggrepel)
 library(lme4)
 
 #### 2: Import the dataset ####
-Sed <- read.xlsx("Metaanalysis_dataset.xlsx",sheet="SpikeSediment") 
+Sed <- read.xlsx("Metaanalysis_dataset.xlsx",sheet="SpikeSediment") %>%
+   filter(SedimentMeasured=="Yes")
 Water <- read.xlsx("Metaanalysis_dataset.xlsx",sheet="WaterOnly")
 
 dim(Sed) # confirm the data dimension
@@ -147,7 +148,7 @@ all %>%
 all_model <- all %>%
   ungroup(Chemical,Species) %>% 
   filter(!is.na(OCNorm_ug_gOC) & !is.na(SedToTotalWater_Ratio) & !is.na(Aging_days) &
-           !is.na(Renewal) & !is.na(SpikeMethod_detailed) ) %>%
+           !is.na(Renewal) & !is.na(SpikeMethod_detailed) & !is.na(Food) ) %>%
   mutate(SedToTotalWater_Ratio = scale(log10(SedToTotalWater_Ratio)) ) %>%
   mutate(Aging_days=scale(log10(Aging_days)) ) %>% 
   mutate(TOC = scale(TOC) ) %>%
