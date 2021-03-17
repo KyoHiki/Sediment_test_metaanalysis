@@ -18,16 +18,16 @@ library(ggrepel)
 library(lme4)
 
 #### 2: Import the dataset ####
-Sed <- read.xlsx("Metaanalysis_dataset.xlsx",sheet="SpikeSediment") %>%
-   filter(SedimentMeasured=="Yes")
-Water <- read.xlsx("Metaanalysis_dataset.xlsx",sheet="WaterOnly")
+Sed <- read.xlsx("Metaanalysis_dataset.xlsx",sheet="SpikeSediment_TableS1") %>%
+   filter(SedimentMeasured=="Yes")   # data filtering
+Water <- read.xlsx("Metaanalysis_dataset.xlsx",sheet="WaterOnly_TableS2")
 
 dim(Sed) # confirm the data dimension
 dim(Water) 
 
 ``` 
 
-[1] 158  25
+[1] 172  32
 [1] 45 24
 
 ``` r
