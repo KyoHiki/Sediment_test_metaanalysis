@@ -154,7 +154,7 @@ all_model <- all %>%
   mutate(TOC = scale(TOC) ) %>%
   mutate(OrganicSource=ifelse(is.na(OrganicSource), "Environ", OrganicSource) )
 
-full_all <- lmer ( log10(OCNorm_ug_gOC) ~ Chemical + Species + SedType + Renewal + SpikeMethod_detailed + SedToTotalWater_Ratio + Aging_days + (1|Lab)  , all_model ) 
+full_all <- lmer ( log10(OCNorm_ug_gOC) ~ Chemical + Species + SedType + Renewal + SpikeMethod_detailed + SedToTotalWater_Ratio + Aging_days + Food + (1|Lab)  , all_model ) 
 
 # model selection
 options(na.action = "na.fail")
