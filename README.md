@@ -1,5 +1,5 @@
 # What is this page?
-This page shows the R code for meta-analysis of spiked sediment toxicity tests with a crustacean *Hyalella azteca* and an insect *Chrionomus dilutus*. See the paper in Integrated Environmental Assessment and Management (Hiki et al., 2021, accepted; https://doi.org/10.1002/ieam.4413) for the details.
+This page shows the R code for meta-analysis of spiked sediment toxicity tests with a crustacean *Hyalella azteca* and an insect *Chrionomus dilutus*. See the paper in Integrated Environmental Assessment and Management (Hiki et al., 2021; https://doi.org/10.1002/ieam.4413) for the details.
   
    
 # Introduction  
